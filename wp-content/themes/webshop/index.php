@@ -1,16 +1,26 @@
-index.php
 <!DOCTYPE html>
+
 <html>
 
+
+
 <head>
+
     <meta charset="<?php bloginfo('charset'); ?>">
+
     <title><?php wp_title('|', true, 'right'); ?></title>
+
     <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>" type="text/css" />
+
     <?php wp_head(); ?>
+
 </head>
 
+
+
 <body>
-    <?= get_header(); 
+    <?= get_header();
+
     if (have_posts()) : ?>
 
     <header>
@@ -18,16 +28,33 @@ index.php
         <?= get_search_form(); ?>
     </header>
 
+
+
     <div class="post-block-container">
+
         <?php while (have_posts()) :  the_post(); ?>
+
+
 
             <?php get_template_part('template-parts/post-block'); ?>
 
         <?php endwhile; ?>
+
     </div>
+
 <?php
+
 endif; ?>
+
+   <?php if (is_page(139)) :?> {
+        <?php get_template_part('pages/nyheter.php'); ?>
+    }
+    <?php endif; ?>
+
     <?php wp_footer(); ?>
+
 </body>
+
+
 
 </html>

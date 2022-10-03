@@ -1,123 +1,450 @@
 /*
 Theme Name: Ace The Vase
+Theme URI: https://github.com/tidythemes/blankslate
 Author: TidyThemes
+Author URI: http://tidythemes.com/
+Description: Please read: tidythemes.com/concept. Donations: https://calmestghost.com/donate. BlankSlate is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
 Version: 2022.4
+Requires at least: 5.2
+Tested up to: 5.9
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: blankslate
+BlankSlate WordPress Theme © 2011-2022 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
 */
 
-body {
-    background-color: #E4E3D3;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* HEADER  */
+
 header.header-site {
-    background-color: #BD632F;
-    display: flex;
-    justify-content: space-around;
-    color: #E4E3D3;
-    align-items: center;
+  background-color: #bd632f;
+  display: flex;
+  justify-content: space-around;
+
+  color: #e4e3d3;
+
+  align-items: center;
 }
 
 .menu-header-menu-container {
-    display: flex;
-    display: row;
-    align-items: flex-start;
+  display: flex;
+
+  display: row;
+
+  align-items: flex-start;
 }
 
-.menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
-    gap: 5%;
-    list-style-type: none;
+.menu-header-menu-container menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  gap: 5%;
+  list-style-type: none;
 }
-
 
 h2.heading {
-    color: #E4E3D3;
+  color: #e4e3d3;
 }
 
 .sub-menu {
-    display: none;
+  display: none;
 }
 
 .menu-item:hover .sub-menu {
-    display: block;
+  display: block;
 }
 
 form#searchform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* ENSKILD KATEGORI SIDA - template block */ 
-
-.header-single-page {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    color: white;
-    margin-top: -1%;
-}
-
-.header-single-page img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.header-info {
-    position: relative;
-    align-items: center;
-    text-align: center;
-    color: #E4E3D3;
-}
-
-.woocommerce-categories {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* SEARCH  */
+
 .header-sök {
-    text-align: center;
+  text-align: center;
 }
 
 .post-block-container {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    gap: 2%;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+
+  grid-template-rows: auto auto auto auto;
+
+  gap: 2%;
+
+  justify-content: center;
+
+  align-items: center;
 }
 
 .post-block {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+
+  justify-content: space-around;
 }
 
 .post-block-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
 }
 
 /* Woocommerce.php  */
-.other-category-container {
-    background-color: #97B98D;
 
+.other-category-container {
+  background-color: #97b98d;
+}
+
+/*om oss*/
+.om-oss {
+  height: 100vh;
+  background-color: white;
+}
+.om-oss h1 {
+  padding-top: 4%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.about-img {
+  text-align: center;
+}
+
+.about-content {
+  padding: 4% 35%;
+}
+
+/* kontakta oss sidan */
+.kontakta-oss {
+  width: 100%;
+  height: auto;
+  padding-top: 4%;
+  display: inline-flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.kontakta-oss fieldset {
+  border: none;
+}
+
+/* titeln */
+.kontakta-oss h3 {
+  padding-bottom: 6%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* texten */
+.kontakta-oss p {
+  padding-bottom: 10%;
+  text-align: left;
+  width: 80%;
+  padding-left: 20%;
+}
+
+/* texten över inputs */
+.kontakta-oss label {
+  font-size: 16px;
+}
+
+/* obligatoriska fält * */
+.kontakta-oss span {
+  color: red;
+}
+
+.kontakta-oss input {
+  width: 100%;
+  display: block;
+  height: 32px;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 14px;
+  color: lightgrey;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 3px;
+}
+
+.kontakta-oss textarea {
+  font-size: 16px;
+  margin-top: 3px;
+  padding: 5px;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 3px;
+}
+
+.frm_submit {
+  justify-content: end;
+  text-align: end;
+  padding-top: 10px;
+}
+
+.frm_button_submit {
+  height: 34px;
+  width: 100px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  background-color: rgb(97, 135, 122);
+}
+
+/* footer */
+
+footer.footer-site {
+  background-color: rgb(76, 148, 118);
+  display: flex;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 3%;
+  color: white;
+}
+
+footer.footer-site ul li {
+  text-decoration: none;
+  list-style-type: none;
+  width: 200px;
+  padding-top: 5px;
+}
+
+footer.footer-site ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* loggan */
+footer.footer-site h1.red {
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  width: 100%;
+}
+
+footer.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer.footer-site a {
+  text-decoration: none;
+  color: white;
+  width: 200px;
+}
+
+.info {
+  width: 200px;
+  padding-top: 5px;
+}
+
+/* nyheter */
+/* hela sidan */
+.alla-nyheter {
+  text-align: center;
+  background-color: rgb(217, 216, 216);
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  align-items: center;
+}
+
+/* rubrik (nyheter)*/
+.nyheter {
+  color: #000;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* texten under huvudrubrik*/
+.news-info {
+  padding-bottom: 3%;
+}
+
+/* hela nyheten */
+.post-news {
+  display: inline-flex;
+  flex-direction: row;
+  height: 500px;
+  width: 300px;
+  color: black;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 16px;
+  overflow: hidden;
+  text-align: left;
+  align-items: baseline;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+}
+
+.post-news a,
+h1,
+span {
+  text-decoration: none;
+  color: #000;
+}
+
+.news-line {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1000px;
+  padding-bottom: 5%;
+}
+
+/* nyhetsbilden */
+.news-image img {
+  height: 250px;
+  width: 300px;
+  padding: 0%;
+  margin: 0%;
+  border-bottom: 0.5px solid rgb(239, 238, 238);
+}
+
+/* rubrik, text, datum */
+.news-content {
+  padding: 6%;
+}
+
+.read {
+  color: black;
+  bottom: 2%;
+  position: absolute;
+  font-weight: 700;
+}
+
+/* enskild nyhet */
+.single-news {
+  background-color: white;
+  height: auto;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+
+.single-news .single-img img {
+  height: 400px;
+}
+
+/* titeln */
+.single-news h1 {
+  color: black;
+  padding-bottom: 20px;
+}
+
+/* innehåll/text */
+.single-page-content {
+  padding-top: 2%;
+  padding-bottom: 4%;
+  height: auto;
+  text-align: left;
+  padding-left: 35%;
+  padding-right: 35%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* tillbaka till nyheter */
+.single-news a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* single product*/
+.woocommerce div.product form.cart .button {
+  background-color: gray;
+}
+
+.single_add_to_cart_button_button_alt {
+  background-color: gray;
+}
+form.cart ::before {
+  background-color: gray;
+}
+
+/* ENSKILD KATEGORI SIDA - template block */
+
+.header-single-page {
+  width: 100%;
+
+  height: 300px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  position: relative;
+
+  color: white;
+
+  margin-top: -1%;
+}
+
+.header-single-page img {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.header-info {
+  position: relative;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #e4e3d3;
+}
+
+.woocommerce-categories {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
 }

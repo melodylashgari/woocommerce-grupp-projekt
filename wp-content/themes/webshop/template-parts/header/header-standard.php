@@ -1,5 +1,5 @@
 <header class="header-site">
-    <div> <?php wp_nav_menu(array('theme_location' => 'primary',)) ?> </div>
+<div> <?php wp_nav_menu(array('theme_location' => 'primary',)) ?> </div>
     <a href=" <?= get_home_url(); ?> ">
         <h2 class="heading"> <?php echo get_bloginfo('name'); ?> </h2>
     </a>
