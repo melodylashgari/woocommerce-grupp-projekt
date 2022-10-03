@@ -78,29 +78,21 @@ form#searchform {
 
 .post-block-container {
   display: grid;
-
   grid-template-rows: auto auto auto auto;
-
   gap: 2%;
-
   justify-content: center;
-
   align-items: center;
 }
 
 .post-block {
   display: flex;
-
   justify-content: space-around;
 }
 
 .post-block-info {
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
 }
 
@@ -394,57 +386,49 @@ form.cart ::before {
 }
 
 /* ENSKILD KATEGORI SIDA - template block */
-
 .header-single-page {
   width: 100%;
-
-  height: 300px;
-
+  height: 300px;  
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   overflow: hidden;
-
   position: relative;
-
   color: white;
-
   margin-top: -1%;
 }
 
 .header-single-page img {
   position: absolute;
-
   top: 0;
-
   left: 0;
-
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   z-index: -1;
 }
 
 .header-info {
   position: relative;
-
   align-items: center;
-
   text-align: center;
-
   color: #e4e3d3;
 }
 
 .woocommerce-categories {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
+}
+
+.recommendation-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #97b98d;
+}
+
+.recommendation-block-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
