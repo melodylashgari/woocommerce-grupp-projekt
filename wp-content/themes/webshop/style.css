@@ -1,0 +1,123 @@
+/*
+Theme Name: Ace The Vase
+Author: TidyThemes
+Version: 2022.4
+*/
+
+body {
+    background-color: #E4E3D3;
+}
+
+/* HEADER  */
+header.header-site {
+    background-color: #BD632F;
+    display: flex;
+    justify-content: space-around;
+    color: #E4E3D3;
+    align-items: center;
+}
+
+.menu-header-menu-container {
+    display: flex;
+    display: row;
+    align-items: flex-start;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    gap: 5%;
+    list-style-type: none;
+}
+
+
+h2.heading {
+    color: #E4E3D3;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+form#searchform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ENSKILD KATEGORI SIDA - template block */ 
+
+.header-single-page {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    margin-top: -1%;
+}
+
+.header-single-page img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-info {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    color: #E4E3D3;
+}
+
+.woocommerce-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* SEARCH  */
+.header-sök {
+    text-align: center;
+}
+
+.post-block-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-block-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Woocommerce.php  */
+.other-category-container {
+    background-color: #97B98D;
+
+}

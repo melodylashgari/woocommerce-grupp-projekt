@@ -1,0 +1,15 @@
+/* WORDPRESS */ 
+Användarnamn: admin 
+Lösenord: admin 
+
+/* DATABASE */ 
+- Produkternas namn är article_(ANLEDNING) t.ex. article_price 
+- Prefix för tabell: VMG
+- GLÖM INTE ATT ÄNDRA I wp-config så att ni kan nå era databaser (då vi alla har olika localhost/username/password)
+
+/* GITHUB */ 
+https://github.com/jofbrvega/Woocommerce/tree/main/wordpress
+
+/* HEMSIDA */ 
+- Språk: Svenska
+- Reaprodukter: Demeter 2 styck, Anthena 
