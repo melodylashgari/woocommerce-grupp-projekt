@@ -33,7 +33,7 @@ if (!function_exists('mytheme_register_nav_menu')) {
 
             'primary_menu' => __('Primary Menu', 'Header-menu'),
 
-            'footer_menu'  => __('Footer Menu', ''),
+            'footer_menu'  => __('Footer Menu', 'Footermenu'),
 
         ));
     }

@@ -18,6 +18,5 @@ Test
 Det här är en produktsida
 <?php endif; ?> 
 
-Hallo 
 <?php
 get_footer();

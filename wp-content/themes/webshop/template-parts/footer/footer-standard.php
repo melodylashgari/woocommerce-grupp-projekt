@@ -3,7 +3,7 @@
         <h3 class="nav3">Navigate</h3>
         <div class="nav-column"> 
         <a href="<?php the_permalink( ); ?>">
-            <?php wp_nav_menu(array('theme_location' => 'footermenu',)) ?> 
+            <?php wp_nav_menu(array('footer_menu' => 'Footer-menu',)) ?> 
         </a>
         </div>
     </nav>
