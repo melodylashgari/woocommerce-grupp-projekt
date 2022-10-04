@@ -7,8 +7,8 @@ if ( have_posts() ) :
         // Display post content
     endwhile;
 endif; 
-
 ?>
+
 
 <?php
 get_footer(); 

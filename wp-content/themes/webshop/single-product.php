@@ -16,36 +16,36 @@ get_header();
 
 	
 	
-<div class="single-product">
+    <div class="single-product">
 
    
-    <!--katergorinamn-->
-    
-    <!-- produktnamn-->
-    <h1><?php the_title(); ?></h1>
+<!--katergorinamn-->
 
-    <!-- pris -->
+<!-- produktnamn-->
+<h1><?php the_title(); ?></h1>
 
-    <!-- image -->
-    <div class="single-product-img">   
-    <?php $image = get_field('product-image'); ?>
-    <?php if( !empty($image) ): ?>
-        <img src="<?php echo $image['url']; ?>" />
-    <?php endif; ?>
-    </div>     
+<!-- pris -->
 
-    <div class="single-page-content">
-        <?php the_content( ); ?>
-    </div>
+<!-- image -->
+<div class="single-product-img">   
+<?php $image = get_field('product-image'); ?>
+<?php if( !empty($image) ): ?>
+    <img src="<?php echo $image['url']; ?>" />
+<?php endif; ?>
+</div>     
 
-    <!-- variation -->
+<div class="single-page-content">
+    <?php the_content( ); ?>
+</div>
 
-    <!-- + - -->
+<!-- variation -->
 
-    <!--add to cart button -->
+<!-- + - -->
+
+<!--add to cart button -->
 
 
-    <!-- beskrivning -->
+<!-- beskrivning -->
 
 </div> 
 
