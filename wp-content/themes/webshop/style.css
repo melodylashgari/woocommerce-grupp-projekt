@@ -45,9 +45,11 @@ header.header-site {
   margin: 15px 15px;
 }
 
-.menu-item-63 a, .menu-item-64 a, .menu-item-65 a{
+.menu-header-menu-container a{
   color: #e4e3d3;
 }
+
+
 
 h2.heading {
   color: #e4e3d3;
