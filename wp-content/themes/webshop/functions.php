@@ -7,8 +7,9 @@ function anotheremptytheme_enqueue()
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
-// Enables "featured image"
+// Enables "featured image" + category thumbnails
 add_theme_support('post-thumbnails');
+add_theme_support('category-thumbnails');
 
 
 
@@ -125,7 +126,7 @@ function woo_custom_description_tab_content() {
 }
 */
 
-/* ta bort SKUn ummer*/
+/* ta bort SKU nummer*/
 add_filter('wc_product_sku_enabled', '__return_false');
 
 
@@ -201,7 +202,6 @@ add_action('after_setup_theme', 'add_woocommerce_support');
 
 function woocommerce_content()
 {
-
     if (is_singular('product')) {
 
         while (have_posts()) :
@@ -215,7 +215,11 @@ function woocommerce_content()
 
         <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
 
-            <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+
+            <div class="page-title" >
+                <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+            </div>
+
 
         <?php endif; ?>
 
@@ -264,6 +268,14 @@ add_action('shutdown', function () {
     while (@ob_end_flush());
 });
 
+add_filter('woocommerce_show_page_title', 'remove_category_title_from_product_archive');
+function remove_category_title_from_product_archive($title)
+{
+    if (!is_product_category()) {
+        $title = false;
+    }
+    return $title;
+}
 
 /* Google font */
 
@@ -272,4 +284,6 @@ function add_google_fonts() {
 wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false );}
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+
 

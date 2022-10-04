@@ -23,42 +23,68 @@ BlankSlate is distributed under the terms of the GNU GPL
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* HEADER  */
 
 header.header-site {
   background-color: #bd632f;
   display: flex;
-  justify-content: space-around;
-  color: #e4e3d3;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 180px;
 }
 
-.menu-header-menu-container {
-  display: flex;
-  border: 2px solid green;
-}
-
-
-.menu-header-menu-container menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  width: 100%;
-  gap: 5%;
+#menu-header-menu {
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 27vw;
+  margin: 15px 15px;
 }
+
+.menu-header-menu-container a{
+  color: #e4e3d3;
+}
+
+
 
 h2.heading {
   color: #e4e3d3;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.header-login{
+  margin-top: 15px;
+}
+
+.header-login-button{
+  color: #e4e3d3;
+  display: inline;
+}
+
+.header-options{
+  width: 10vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
 .sub-menu {
   display: none;
+  background-color: #97b98d;
+  padding: 15px;
+  border-radius: 10px;
+  list-style-type: none;
+  line-height: 26px;
 }
 
 .menu-item:hover .sub-menu {
   display: block;
+  position: absolute;
 }
 
 form#searchform {
@@ -73,12 +99,22 @@ form#searchform {
   text-align: center;
 }
 
+.search-header {
+  text-align: center;
+}
+
+input#s {
+  width: 600px;
+  height: 50px;
+}
+
 .post-block-container {
   display: grid;
   grid-template-rows: auto auto auto auto;
   gap: 2%;
   justify-content: center;
   align-items: center;
+  padding: 2%;
 }
 
 .post-block {
@@ -442,14 +478,18 @@ span {
 /* ENSKILD KATEGORI SIDA - template block */
 .header-single-page {
   width: 100%;
-  height: 300px;  
+  height: 200px;  
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   overflow: hidden;
   position: relative;
   color: white;
-  margin-top: -1%;
+}
+
+.header-text {
+  color: #e4e3d3;
 }
 
 .header-single-page img {
@@ -467,6 +507,17 @@ span {
   align-items: center;
   text-align: center;
   color: #e4e3d3;
+}
+
+.page-title, .term-description {
+  background-color: #bd632f;
+  text-align: center;
+}
+
+
+
+.term-description {
+  padding-bottom: 5%;
 }
 
 .woocommerce-categories {
@@ -504,14 +555,18 @@ span {
   display: flex;
   flex-direction: column;
   background-color: #97b98d;
-  padding: 10%;
+  padding: 5%;
+}
+
+.ul.products.columns-2 {
+  display: flex;
 }
 
 .recommendation-block-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5%;
+  padding: 2%;
 }
 
 
@@ -527,4 +582,11 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
 
 .recommendation-info {
   justify-content: space-evenly;
+}
+
+.recommendation-image {
+  height: 10rem;
+  width: 15rem;
+  overflow: hidden;
+  justify-content: center;
 }
