@@ -18,6 +18,7 @@ BlankSlate is distributed under the terms of the GNU GPL
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat';
   margin: 0;
   padding: 0;
 }
@@ -52,7 +53,6 @@ header.header-site {
 
 h2.heading {
   color: #e4e3d3;
-  font-family: 'Montserrat';
 }
 
 .sub-menu {
