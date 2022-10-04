@@ -23,40 +23,62 @@ BlankSlate is distributed under the terms of the GNU GPL
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* HEADER  */
 
 header.header-site {
   background-color: #bd632f;
   display: flex;
-  justify-content: space-around;
-
-  color: #e4e3d3;
-
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 180px;
 }
 
-.menu-header-menu-container {
-  display: flex;
-  border: 2px solid green;
-}
-
-
-.menu-header-menu-container menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  width: 100%;
-  gap: 5%;
+#menu-header-menu {
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 27vw;
+  margin: 15px 15px;
+}
+
+.menu-item-63 a, .menu-item-64 a, .menu-item-65 a{
+  color: #e4e3d3;
 }
 
 h2.heading {
   color: #e4e3d3;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.header-login{
+  margin-top: 15px;
+}
+
+.header-login-button{
+  color: #e4e3d3;
+  display: inline;
+}
+
+.header-options{
+  width: 10vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
 .sub-menu {
   display: none;
+  background-color: #97b98d;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  list-style-type: none;
+  line-height: 26px;
 }
 
 .menu-item:hover .sub-menu {
@@ -67,6 +89,7 @@ form#searchform {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 /* SEARCH  */

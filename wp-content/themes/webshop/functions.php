@@ -96,7 +96,7 @@ function related_upsell_products()
 }
 
 
-/* ta bort SKUn ummer*/
+/* ta bort SKU nummer*/
 add_filter('wc_product_sku_enabled', '__return_false');
 
 // Options page (t.ex. ändra hela sidans heading color)
@@ -290,4 +290,6 @@ function add_google_fonts() {
 wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false );}
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+
 
