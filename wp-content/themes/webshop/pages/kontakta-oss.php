@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<?php if(is_page(118)): ;?>
+<?php if(is_page(181)): ;?>
 	<div class="kontakta-oss">
 		
 		<?php the_content( ); ?>

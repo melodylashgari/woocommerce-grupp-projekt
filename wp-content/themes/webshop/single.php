@@ -10,7 +10,7 @@ get_header();
     <h1><?php the_title(); ?></h1>
     <br>
     <div class="single-img">   
-    <?php $image = get_field('news-image'); ?>
+    <?php $image = get_field('nyhets_bild'); ?>
     <?php if( !empty($image) ): ?>
         <img src="<?php echo $image['url']; ?>" />
     <?php endif; ?>

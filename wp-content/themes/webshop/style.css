@@ -117,6 +117,7 @@ form#searchform {
 
 .about-content {
   padding: 4% 35%;
+  line-height: 145%;
 }
 
 /* kontakta oss sidan */
@@ -512,6 +513,8 @@ span {
   justify-content: space-around;
   padding: 5%;
 }
+
+
 
 .recommendation-block {
   padding: 10%;
