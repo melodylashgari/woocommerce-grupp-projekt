@@ -425,10 +425,25 @@ form.cart ::before {
   display: flex;
   flex-direction: column;
   background-color: #97b98d;
+  padding: 10%;
 }
 
 .recommendation-block-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 5%;
+}
+
+.recommendation-block {
+  padding: 10%;
+}
+
+img.attachment-thumbnail.size-thumbnail.wp-post-image {
+    height: 15rem;
+    width: 20rem;
+}
+
+.recommendation-info {
+  justify-content: space-evenly;
 }

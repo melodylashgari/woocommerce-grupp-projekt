@@ -21,32 +21,32 @@ woocommerce.php
                 nec congue ligula ornare vel. Sed bibendum dignissim rutrum.
             </p>
         </div>
-        
+
         <div class="recommendation-block-container">
-        <div class="recommendation-block">
-            <div>
-                <?= the_post_thumbnail('thumbnail'); ?>
+            <div class="recommendation-block">
+                <div>
+                    <?= the_post_thumbnail('thumbnail'); ?>
+                </div>
+                <article class="recommendation-info">
+                    <?= the_title(); ?>
+                    <?= the_excerpt(); ?>
+                    <a href="<?= the_permalink(); ?>"> Visa mer </a>
+                </article>
             </div>
-            <article class="recommendation-info">
-                <?= the_title(); ?>
-                <?= the_excerpt(); ?>
-                <a href="<?= the_permalink(); ?>"> Visa mer </a>
-            </article>
+
+
+            <div class="recommendation-block">
+                <div>
+                    <?= the_post_thumbnail('thumbnail'); ?>
+                </div>
+                <article class="recommendation-info">
+                    <?= the_title(); ?>
+                    <?= the_excerpt(); ?>
+                    <a href="<?= the_permalink(); ?>"> Visa mer </a>
+                </article>
+            </div>
         </div>
-        
-        
-        <div class="recommendation-block">
-            <div>
-                <?= the_post_thumbnail('thumbnail'); ?>
-            </div>
-            <article class="recommendation-info">
-                <?= the_title(); ?>
-                <?= the_excerpt(); ?>
-                <a href="<?= the_permalink(); ?>"> Visa mer </a>
-            </article>
-        </div>
-            </div>
-            </div>
+    </div>
     </div>
 
 <?php endif; ?>
