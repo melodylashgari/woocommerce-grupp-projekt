@@ -24,25 +24,43 @@ woocommerce.php
 
         <div class="recommendation-block-container">
             <div class="recommendation-block">
-                <div>
-                    <?= the_post_thumbnail('thumbnail'); ?>
+                <div class="recommendation-image">
+                    <?php
+                    // get the thumbnail id using the queried category term_id
+                    $thumbnail_id = get_term_meta(19, 'thumbnail_id', true);
+
+                    // get the image URL
+                    $image = wp_get_attachment_url($thumbnail_id);
+
+                    // print the IMG HTML
+                    echo "<img src='{$image}' alt='' width='300' height='200' />";
+                    ?>
                 </div>
                 <article class="recommendation-info">
-                    <?= the_title(); ?>
-                    <?= the_excerpt(); ?>
-                    <a href="<?= the_permalink(); ?>"> Visa mer </a>
+                    <?php echo get_the_category_by_ID('19'); ?>
+                    <?php echo category_description('19'); ?>
+                    <a href="<?= get_category_link(19); ?>"> Visa mer </a>
                 </article>
             </div>
 
 
             <div class="recommendation-block">
-                <div>
-                    <?= the_post_thumbnail('thumbnail'); ?>
+                <div class="recommendation-image">
+                    <?php
+                    // get the thumbnail id using the queried category term_id
+                    $thumbnail_id = get_term_meta(30, 'thumbnail_id', true);
+
+                    // get the image URL
+                    $image = wp_get_attachment_url($thumbnail_id);
+
+                    // print the IMG HTML
+                    echo "<img src='{$image}' alt='' width='300' height='200' />";
+                    ?>
                 </div>
                 <article class="recommendation-info">
-                    <?= the_title(); ?>
-                    <?= the_excerpt(); ?>
-                    <a href="<?= the_permalink(); ?>"> Visa mer </a>
+                    <?php echo get_the_category_by_ID('30'); ?>
+                    <?php echo category_description('30'); ?>
+                    <a href="<?= get_category_link(30); ?>"> Visa mer </a>
                 </article>
             </div>
         </div>

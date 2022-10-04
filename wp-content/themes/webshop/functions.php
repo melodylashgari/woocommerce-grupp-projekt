@@ -13,9 +13,9 @@ function anotheremptytheme_enqueue()
 
 
 
-// Enables "featured image"
-
+// Enables "featured image" + category thumbnails
 add_theme_support('post-thumbnails');
+add_theme_support('category-thumbnails');
 
 
 
@@ -196,11 +196,7 @@ add_action('after_setup_theme', 'add_woocommerce_support');
 
 
 function woocommerce_content()
-
 {
-
-
-
     if (is_singular('product')) {
 
 
@@ -221,9 +217,9 @@ function woocommerce_content()
         <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
 
 
-
-            <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
+            <div class="page-title" >
+                <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+            </div>
 
 
         <?php endif; ?>
@@ -281,3 +277,12 @@ remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 add_action('shutdown', function () {
     while (@ob_end_flush());
 });
+
+add_filter('woocommerce_show_page_title', 'remove_category_title_from_product_archive');
+function remove_category_title_from_product_archive($title)
+{
+    if (!is_product_category()) {
+        $title = false;
+    }
+    return $title;
+}

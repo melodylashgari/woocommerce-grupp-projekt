@@ -395,7 +395,6 @@ form.cart ::before {
   overflow: hidden;
   position: relative;
   color: white;
-  margin-top: -1%;
 }
 
 .header-single-page img {
@@ -415,24 +414,40 @@ form.cart ::before {
   color: #e4e3d3;
 }
 
+.page-title, .term-description {
+  background-color: #bd632f;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.page-title {
+  padding-top: 2%;
+}
+
 .woocommerce-categories {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+
 .recommendation-container {
   display: flex;
   flex-direction: column;
   background-color: #97b98d;
-  padding: 10%;
+  padding: 5%;
+}
+
+.ul.products.columns-2 {
+  display: flex;
 }
 
 .recommendation-block-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5%;
+  padding: 2%;
 }
 
 .recommendation-block {
@@ -446,4 +461,11 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
 
 .recommendation-info {
   justify-content: space-evenly;
+}
+
+.recommendation-image {
+  height: 10rem;
+  width: 15rem;
+  overflow: hidden;
+  justify-content: center;
 }
