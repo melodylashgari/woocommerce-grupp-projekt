@@ -2,19 +2,12 @@
 
 add_action('wp_enqueue_scripts', 'anotheremptytheme_enqueue');
 
-
-
 function anotheremptytheme_enqueue()
-
 {
-
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
-
-
 // Enables "featured image"
-
 add_theme_support('post-thumbnails');
 
 
@@ -23,12 +16,9 @@ add_theme_support('post-thumbnails');
 
 if (!function_exists('mytheme_register_nav_menu')) {
 
-
-
     function mytheme_register_nav_menu()
 
     {
-
         register_nav_menus(array(
 
             'primary_menu' => __('Primary Menu', 'Header-menu'),
@@ -44,14 +34,10 @@ if (!function_exists('mytheme_register_nav_menu')) {
 
 
 // Excerpt
-
 function wpdocs_custom_excerpt_length($length)
-
 {
-
     return 2;
 }
-
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 5);
 
 
@@ -72,6 +58,15 @@ function change_rp_text($translated, $text, $domain)
         $translated = esc_html__('You may also like',  $domain);
     }
     return $translated;
+}
+
+
+
+add_filter( 'woocommerce_product_tabs', 'my_remove_product_tabs', 98 );
+ 
+function my_remove_product_tabs( $tabs ) {
+  unset( $tabs['additional_information'] ); // To remove the additional information tab
+  return $tabs;
 }
 
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
@@ -95,9 +90,44 @@ function related_upsell_products()
     }
 }
 
+/**
+ * Change number of related products output
+ */ 
+function woo_related_products_limit() 
+    {
+        global $product;
+      
+        $args['posts_per_page'] = 6;
+        return $args;
+    }
+    add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+    function jk_related_products_args( $args ) 
+    {
+      $args['posts_per_page'] = 2; // 2 related products
+      $args['row'] = 1; // arranged in row
+      return $args;
+    }
+
+
+ /*--custom description och text under -- */
+ /*
+add_filter( 'woocommerce_product_tabs', 'woo_custom_description_tab', 98 );
+function woo_custom_description_tab( $tabs ) {
+
+	$tabs['description']['callback'] = 'woo_custom_description_tab_content';	// Custom description callback
+
+	return $tabs;
+}
+
+function woo_custom_description_tab_content() {
+	echo '<h2>Custom Description</h2>';
+	echo '<p>Here\'s a custom description</p>';
+}
+*/
 
 /* ta bort SKUn ummer*/
 add_filter('wc_product_sku_enabled', '__return_false');
+
 
 // Options page (t.ex. ändra hela sidans heading color)
 
@@ -106,6 +136,7 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
+
 // ----- ACF -blocks/ Hero blocks ------
 
 add_action('acf/init', 'my_acf_init_block_types');
@@ -113,51 +144,32 @@ add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types()
 
 {
-
-
-
     // Check function exists.
 
     if (function_exists('acf_register_block_type')) {
-
-
 
         // register a testimonial block.
 
         acf_register_block_type(array(
 
             'name'              => 'Single Category',
-
             'title'             => __('Single Category Page'),
-
             'description'       => __('Block Single Category.'),
-
             'render_template'   => 'template-parts/blocks/header-single-category.php',
-
             'category'          => 'formatting',
-
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
-
             'keywords'          => array('header-single-category'), // So you can search it in the admin page
 
         ));
 
-
-
         acf_register_block_type(array(
 
             'name'              => 'Category Recommendation',
-
             'title'             => __('Category Recommendation'),
-
             'description'       => __('Block Category Recommendation.'),
-
             'render_template'   => 'template-parts/blocks/category-recommend.php',
-
             'category'          => 'formatting',
-
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
-
             'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
         ));
@@ -166,17 +178,11 @@ function my_acf_init_block_types()
     acf_register_block_type(array(
 
         'name'              => 'Visioner',
-
         'title'             => __('Visioner'),
-
         'description'       => __('Block Visioner.'),
-
         'render_template'   => 'template-parts/blocks/block-vision.php',
-
         'category'          => 'formatting',
-
         'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
-
         'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
     ));
@@ -185,66 +191,42 @@ function my_acf_init_block_types()
 
 
 function add_woocommerce_support()
-
 {
 
     add_theme_support('woocommerce');
 }
-
 add_action('after_setup_theme', 'add_woocommerce_support');
 
 
 
 function woocommerce_content()
-
 {
 
-
-
     if (is_singular('product')) {
-
-
 
         while (have_posts()) :
 
             the_post();
-
             wc_get_template_part('content', 'single-product');
 
         endwhile;
     } else {
-
 ?>
-
-
 
         <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
 
-
-
             <h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-
 
         <?php endif; ?>
 
 
-
         <?php do_action('woocommerce_archive_description'); ?>
-
-
 
         <?php if (woocommerce_product_loop()) : ?>
 
-
-
             <?php do_action('woocommerce_before_shop_loop'); ?>
 
-
-
             <?php woocommerce_product_loop_start(); ?>
-
-
 
             <?php if (wc_get_loop_prop('total')) : ?>
 

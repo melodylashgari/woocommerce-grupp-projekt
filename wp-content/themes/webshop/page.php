@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 
-
-
-
 <!-- Om oss -->
 <?php if(is_page(72)): ;?>
 	<?php
