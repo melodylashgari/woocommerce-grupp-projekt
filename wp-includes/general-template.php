@@ -322,6 +322,7 @@ function get_search_form( $args = array() ) {
 		if ( 'html5' === $format ) {
 			$form = '<form role="search" ' . $aria_label . 'method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
 				<label>
+					
 					<span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
 					<input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" />
 				</label>
@@ -329,7 +330,9 @@ function get_search_form( $args = array() ) {
 			</form>';
 		} else {
 			$form = '<form role="search" ' . $aria_label . 'method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
-				<div>
+
+				<div class="search-form">
+				<div class="search-form-title"> Vad letar du efter? </div>
 					<label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>
 					<input type="text" value="' . get_search_query() . '" name="s" id="s" />
 					<input type="submit" id="searchsubmit" value="' . esc_attr_x( 'Search', 'submit button' ) . '" />

@@ -45,7 +45,7 @@ header.header-site {
   margin: 15px 15px;
 }
 
-.menu-item-63 a, .menu-item-64 a, .menu-item-65 a{
+.menu-item-63 a, .menu-item-64 a, .menu-item-210 a{
   color: #e4e3d3;
 }
 
@@ -76,26 +76,34 @@ h2.heading {
   background-color: #97b98d;
   padding: 15px;
   border-radius: 10px;
-  margin-top: 5px;
   list-style-type: none;
   line-height: 26px;
 }
 
 .menu-item:hover .sub-menu {
   display: block;
+  position: absolute;
 }
 
 form#searchform {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 /* SEARCH  */
 
 .header-sök {
   text-align: center;
+}
+
+.search-header {
+  text-align: center;
+}
+
+input#s {
+  width: 600px;
+  height: 50px;
 }
 
 .post-block-container {
@@ -466,13 +474,18 @@ span {
 /* ENSKILD KATEGORI SIDA - template block */
 .header-single-page {
   width: 100%;
-  height: 300px;  
+  height: 200px;  
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   overflow: hidden;
   position: relative;
   color: white;
+}
+
+.header-text {
+  color: #e4e3d3;
 }
 
 .header-single-page img {
@@ -495,11 +508,12 @@ span {
 .page-title, .term-description {
   background-color: #bd632f;
   text-align: center;
-  padding-bottom: 2%;
 }
 
-.page-title {
-  padding-top: 2%;
+
+
+.term-description {
+  padding-bottom: 5%;
 }
 
 .woocommerce-categories {
