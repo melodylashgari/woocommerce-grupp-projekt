@@ -3,19 +3,24 @@ Shop page
 <?php
 get_header();
 ?>
+<div class="single-product">
+
 
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
         <?php 
+        
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );?>
-                                        
+                          <div class="single-product-content">
+                          
             <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
-
+            </div>
 	<?php endwhile; // end of the loop. ?>
 
 	
-	
+
+    </div>
     <div class="single-product">
 
    
@@ -48,7 +53,6 @@ get_header();
 <!-- beskrivning -->
 
 </div> 
-
 <?php
 get_footer();
 ?>

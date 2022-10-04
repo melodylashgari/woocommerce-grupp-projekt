@@ -412,6 +412,7 @@ span {
 
 
 /* single product*/
+
 /* produktens namn*/
 .woocommerce div.product .product_title {
   color: black;
@@ -558,6 +559,12 @@ span {
   padding: 5%;
 }
 
+.product-p {
+  width: 40%;
+  padding-bottom: 3%;
+}
+
+
 .ul.products.columns-2 {
   display: flex;
 }
@@ -569,7 +576,18 @@ span {
   padding: 2%;
 }
 
+li.product {
+  list-style-type:none;
+}
 
+/* ta bort köp knappen från kontaka oss och om oss */
+.page-id-2 li.product a.button {
+  display: none;
+}
+
+.page-id-181 li.product a.button {
+  display: none;
+}
 
 .recommendation-block {
   padding: 10%;
@@ -589,4 +607,39 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   width: 15rem;
   overflow: hidden;
   justify-content: center;
+}
+
+/* något vi gillar*/
+.like {
+  display: inline-flex;
+  height: 360px;
+  width: 100%;
+  background-color: white;
+}
+
+.like-content {
+  padding: 3%;
+  padding-left: 6%;
+  width: 50%;
+  justify-content: center;
+
+}
+
+.like-content p {
+  padding-top: 2%;
+  width: 60%;
+}
+
+.like-img {
+  width: 50%;
+}
+
+.btn {
+  margin-top: 7%;
+  color: white;
+  background-color: gray;
+  border: none;
+  width: 124px;
+  height: 32px;
+  font-size: 16px;
 }
