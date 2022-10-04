@@ -124,6 +124,7 @@ form#searchform {
   background-color: #97b98d;
 }
 
+
 /*om oss*/
 .om-oss {
   height: 100vh;
@@ -222,8 +223,8 @@ form#searchform {
   background-color: rgb(97, 135, 122);
 }
 
-/* footer */
 
+/* footer */
 footer.footer-site {
   background-color: rgb(76, 148, 118);
   display: flex;
@@ -253,6 +254,7 @@ footer.footer-site h1.red {
   align-items: flex-end;
   justify-content: right;
   width: 100%;
+  padding-bottom: 10%;
 }
 
 footer.footer-nav {
@@ -270,6 +272,7 @@ footer.footer-site a {
   width: 200px;
   padding-top: 5px;
 }
+
 
 /* nyheter */
 /* hela sidan */
@@ -395,17 +398,70 @@ span {
   font-weight: 700;
 }
 
+
 /* single product*/
-.woocommerce div.product form.cart .button {
-  background-color: gray;
+/* produktens namn*/
+.woocommerce div.product .product_title {
+  color: black;
+  padding-top: 15%;
 }
 
-.single_add_to_cart_button_button_alt {
+/* Köp knapp */
+.woocommerce div.product form.cart .button {
   background-color: gray;
+  color: white;
 }
-form.cart ::before {
-  background-color: gray;
+
+/* description tab */
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  padding: 5px;
+  background-color: lightgray;
+  width: 144px;
+  text-align: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 16px;
 }
+
+/* strecket - funkar ej*/
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  padding-left: 4px;
+  color: red;
+}
+
+/* text under description tab */
+.woocommerce-page div.product .woocommerce-tabs {
+  margin-left: 8%;
+}
+
+/* titeln - you may also like */
+.woocommerce .related  h2 {
+  padding: 8%;
+  background-color: lightgray;
+}
+
+/* bakom bilderna you may also like  */
+.woocommerce .related.products ul {
+  width: 100%;
+  height: 400px;
+  background-color: lightgray;
+  text-align: center;
+}
+
+/* bilderna you may also like  */
+.woocommerce .related.products li.product {
+	padding-left: 5%;
+  padding-right: 5%;
+  height: 200px;
+  width: 300px;
+}
+
+/* dölj köpknapp i you may also like */
+.woocommerce .related.products .button {
+  display: none;
+}
+
+ 
 
 /* ENSKILD KATEGORI SIDA - template block */
 .header-single-page {
@@ -417,7 +473,6 @@ form.cart ::before {
   overflow: hidden;
   position: relative;
   color: white;
-  margin-top: -1%;
 }
 
 .header-single-page img {
@@ -437,24 +492,63 @@ form.cart ::before {
   color: #e4e3d3;
 }
 
+.page-title, .term-description {
+  background-color: #bd632f;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.page-title {
+  padding-top: 2%;
+}
+
 .woocommerce-categories {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+/* produktkategorier */
+.produktkategorier {
+  background-color: lightgray;
+  padding-left: 10%;
+  padding-top: 8%;
+}
+
+.produktkategorier h1 {
+  font-weight: 500;
+}
+
+.produktkategorier img {
+  width: 300px;
+  height: 200px;
+}
+.produktkategorier-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  padding-top: 8%;
+  padding-bottom: 10%;
+}
+
 .recommendation-container {
   display: flex;
   flex-direction: column;
   background-color: #97b98d;
-  padding: 10%;
+  padding: 5%;
+}
+
+.ul.products.columns-2 {
+  display: flex;
 }
 
 .recommendation-block-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5%;
+  padding: 2%;
 }
 
 .recommendation-block {
@@ -468,4 +562,11 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
 
 .recommendation-info {
   justify-content: space-evenly;
+}
+
+.recommendation-image {
+  height: 10rem;
+  width: 15rem;
+  overflow: hidden;
+  justify-content: center;
 }

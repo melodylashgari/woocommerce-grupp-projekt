@@ -26,6 +26,9 @@
 			<?php the_field('om_oss_text') ?>
 		</div>
 	</div>
-<?php endif; ?>
+
+	<?php get_template_part('template-parts/blocks/produktkategorier'); ?>
+
+	<?php endif; ?>
 
 <?php get_footer(); ?> 
