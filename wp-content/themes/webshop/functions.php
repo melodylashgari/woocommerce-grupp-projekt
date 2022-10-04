@@ -281,3 +281,13 @@ remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 add_action('shutdown', function () {
     while (@ob_end_flush());
 });
+
+
+/* Google font */
+
+function add_google_fonts() {
+
+wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false );}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+

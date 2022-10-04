@@ -36,11 +36,9 @@ header.header-site {
 
 .menu-header-menu-container {
   display: flex;
-
-  display: row;
-
-  align-items: flex-start;
+  border: 2px solid green;
 }
+
 
 .menu-header-menu-container menu {
   display: flex;
@@ -54,6 +52,7 @@ header.header-site {
 
 h2.heading {
   color: #e4e3d3;
+  font-family: 'Montserrat';
 }
 
 .sub-menu {
