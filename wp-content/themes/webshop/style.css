@@ -34,7 +34,7 @@ header.header-site {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 100px;
+  height: 180px;
 }
 
 .header-subtext {
