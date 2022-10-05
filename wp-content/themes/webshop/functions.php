@@ -60,7 +60,80 @@ function change_rp_text($translated, $text, $domain)
     }
     return $translated;
 }
+/* texten under you may like*/
+add_action('woocommerce_after_single_product_summary', 'add_rp_text', 15);
+function add_rp_text() {
+    echo '<p class="rp_text"> Här är två liknande produkter som du kan gå in och titta på. </p>';
+}
 
+/*--custom description och text under -- */
+ /*
+add_filter( 'woocommerce_product_tabs', 'woo_custom_description_tab', 98 );
+function woo_custom_description_tab( $tabs ) {
+
+	$tabs['description']['callback'] = 'woo_custom_description_tab_content';	// Custom description callback
+
+	return $tabs;
+}
+
+function woo_custom_description_tab_content() {
+	echo '<h2>Custom Description</h2>';
+	echo '<p>Here\'s a custom description</p>';
+}
+*/
+
+/* + och - fungerar ej */
+add_action( 'woocommerce_after_quantity_input_field', 'ts_quantity_plus_sign' );
+ 
+function ts_quantity_plus_sign() {
+   echo '<button type="button" class="plus" >+</button>';
+}
+ 
+add_action( 'woocommerce_before_quantity_input_field', 'ts_quantity_minus_sign' );
+function ts_quantity_minus_sign() {
+   echo '<button type="button" class="minus" >-</button>';
+}
+
+
+/* Ta bort kategori (under) */
+remove_action( 'woocommerce_single_product_summary',
+'woocommerce_template_single_meta', 40 );
+
+/* lägg till kategori över produktnamn*/
+add_action( 'woocommerce_single_product_summary', 'add_category_before_product_title', 4 );
+function add_category_before_product_title(){
+	global $post;
+	$terms = get_the_terms( $post->ID, 'product_cat' );
+	$title = '';
+	foreach ($terms as $term) {
+	   $title = $term->name .' ';
+	}
+	echo "<h5 class='product_title entry-title'>".$title."</h5>";
+}
+
+/* category överst på sidan - lägg till produktnamn*/
+add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 7 );
+add_action( 'woocommerce_before_single_product_summary', 'custom_product_category_title', 6 );
+function custom_product_category_title(){
+	global $post;
+	$terms = get_the_terms( $post->ID, 'product_cat' );
+
+
+    $product = '';
+	$title = '';
+	foreach ($terms as $term) {
+	   $title = $term->name .' ';
+	}
+
+	echo "<p class='product_title entry-title'>".$title." / ".$product." </p>";
+}
+
+/* byta namn på description tag */
+add_filter( 'woocommerce_product_description_tab_title', 'bbloomer_rename_description_product_tab_label' );
+ 
+function bbloomer_rename_description_product_tab_label() {
+    return 'Beskrivning';
+}
 
 
 add_filter( 'woocommerce_product_tabs', 'my_remove_product_tabs', 98 );
@@ -110,22 +183,6 @@ function woo_related_products_limit()
     }
 
 
- /*--custom description och text under -- */
- /*
-add_filter( 'woocommerce_product_tabs', 'woo_custom_description_tab', 98 );
-function woo_custom_description_tab( $tabs ) {
-
-	$tabs['description']['callback'] = 'woo_custom_description_tab_content';	// Custom description callback
-
-	return $tabs;
-}
-
-function woo_custom_description_tab_content() {
-	echo '<h2>Custom Description</h2>';
-	echo '<p>Here\'s a custom description</p>';
-}
-*/
-
 /* ta bort SKU nummer*/
 add_filter('wc_product_sku_enabled', '__return_false');
 
@@ -174,7 +231,7 @@ function my_acf_init_block_types()
             'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
         ));
-    }
+  
 
     acf_register_block_type(array(
 
@@ -197,6 +254,15 @@ function my_acf_init_block_types()
         'category'          => 'formatting',
         'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
         'keywords'          => array('front-page-hero '), // So you can search it in the admin page
+    ));
+    acf_register_block_type(array(
+        'name'              => 'Butiker',
+        'title'             => __('Butiker'),
+        'description'       => __('Block Butiker.'),
+        'render_template'   => 'template-parts/blocks/butiker.php',
+        'category'          => 'formatting',
+        'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
+        'keywords'          => array('butiker'), // So you can search it in the admin page
 
     ));
 }

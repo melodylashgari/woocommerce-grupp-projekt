@@ -37,6 +37,10 @@ header.header-site {
   height: 60px;
 }
 
+.header-subtext {
+  padding: 2%;
+}
+
 #menu-header-menu {
   list-style-type: none;
   display: flex;
@@ -45,7 +49,7 @@ header.header-site {
   margin: 15px 15px;
 }
 
-.menu-header-menu-container a{
+.menu-header-menu-container a {
   color: #e4e3d3;
 }
 
@@ -103,6 +107,7 @@ form#searchform {
 
 .search-header {
   text-align: center;
+  padding: 2%;
 }
 
 input#s {
@@ -270,19 +275,17 @@ footer.footer-site ul li {
   padding-top: 5px;
 }
 
-footer.footer-site ul li a {
-  text-decoration: none;
-  color: white;
-}
-
 /* loggan */
 footer.footer-site h1.red {
-  color: white;
-  display: flex;
-  align-items: flex-end;
+  display: flex; 
+  flex-direction: row;
+  /*align-items: flex-end;*/
   justify-content: right;
   width: 100%;
-  padding-bottom: 10%;
+}
+
+footer.footer-site h1.red a{
+  width: auto;
 }
 
 footer.footer-nav {
@@ -432,13 +435,22 @@ span {
 /* produktens namn*/
 .woocommerce div.product .product_title {
   color: black;
-  padding-top: 15%;
+  padding-top: 4%;
+  padding-bottom: 1%;
 }
 
+.woocommerce-product-details__short-description  {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 /* Köp knapp */
 .woocommerce div.product form.cart .button {
   background-color: gray;
   color: white;
+  border-radius: 0;
+  font-size: 12px;
+  display: block;
+  width: 122px;
 }
 
 /* description tab */
@@ -450,12 +462,14 @@ span {
   justify-content: center;
   height: 40px;
   font-size: 16px;
+  border-radius: 0%;
 }
 
-/* strecket - funkar ej*/
+/* strecket - border-bottom */
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
-  padding-left: 4px;
-  color: red;
+  border-bottom: 1px solid rgb(197, 196, 196);
+  z-index: 1;
+  margin-left: 5%;
 }
 
 /* text under description tab */
@@ -469,18 +483,104 @@ span {
   background-color: lightgray;
 }
 
+.woocommerce  p.rp_text {
+  color: #46a32a;
+  padding-left: 8%;
+}
+
 /* bakom bilderna you may also like  */
 .woocommerce .related.products ul {
   width: 100%;
   height: 400px;
   background-color: lightgray;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+/* fixa bilderna så d blir större - funkar ej!*/
+.woocommerce ul.products li.product a img {
+  width: 200%;
+  height: auto;
+  display: block;
+}
+
+.woocommerce div.product p.product_title {
+  padding-top: 5%;
+  padding-left: 7%;
+  padding-bottom: 5%;
+}
+
+/* välj storlek */
+.woocommerce div.product form.cart .variations th.label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* samma som över*/
+.woocommerce div.product form.cart .variations label {
+  width: 100%;
+  display: block;
+}
+
+/* choose an option */
+.woocommerce div.product form.cart .variations td {
+  display: block;
+}
+.woocommerce div.product form.cart .variations select {
+  min-width: 20%;
+  max-width: 40%;
+}
+
+.woocommerce .quantity .qty {
+  display: inline;
+  border: none;
+  padding-left: 10px;
+}
+
+button.plus, button.minus{
+  border-radius: 50%;
+  background-color: #c6b7af;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.woocommerce div.product form.cart div.quantity {
+  display: block;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
+/* produkt stora och små bilder*/
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+  padding-left: 15%;
+}
+
+.woocommerce div.product div.images img {
+  padding-right: 8%;
+}
+
+/* produktbilden*/
+.woocommerce div.product div.images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  padding-bottom: 8%;
+}
+
+/* få enskild produktbild att synas */
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+  opacity: 1 !important;
 }
 
 /* bilderna you may also like  */
 .woocommerce .related.products li.product {
-	padding-left: 5%;
-  padding-right: 5%;
+	padding-left: 6%;
+  padding-right: 6%;
   height: 200px;
   width: 300px;
 }
@@ -490,6 +590,48 @@ span {
   display: none;
 }
 
+/* ta bort h2 description */
+.woocommerce div.product .woocommerce-tabs .panel h2 {
+  display: none;
+}
+
+/* något vi gillar*/
+.like {
+  display: inline-flex;
+  height: 360px;
+  width: 100%;
+  background-color: white;
+}
+
+.like-content {
+  padding: 3%;
+  padding-left: 6%;
+  width: 50%;
+  justify-content: center;
+}
+
+.like-content p {
+  padding-top: 2%;
+  width: 60%;
+}
+
+.like-img {
+  width: 50%;
+}
+
+.woocommerce img, .woocommerce-page .like-img img {
+  height: 360px;
+}
+
+.btn {
+  margin-top: 7%;
+  color: white;
+  background-color: gray;
+  border: none;
+  width: 124px;
+  height: 32px;
+  font-size: 16px;
+}
  
 
 /* ENSKILD KATEGORI SIDA - template block */
@@ -531,8 +673,6 @@ span {
   text-align: center;
 }
 
-
-
 .term-description {
   padding-bottom: 5%;
 }
@@ -559,6 +699,7 @@ span {
   width: 300px;
   height: 200px;
 }
+
 .produktkategorier-content {
   display: flex;
   flex-direction: row;
@@ -579,7 +720,6 @@ span {
   width: 40%;
   padding-bottom: 3%;
 }
-
 
 .ul.products.columns-2 {
   display: flex;
@@ -610,8 +750,8 @@ li.product {
 }
 
 img.attachment-thumbnail.size-thumbnail.wp-post-image {
-    height: 15rem;
-    width: 20rem;
+  height: 15rem;
+  width: 20rem;
 }
 
 .recommendation-info {
@@ -625,37 +765,21 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   justify-content: center;
 }
 
-/* något vi gillar*/
-.like {
-  display: inline-flex;
-  height: 360px;
-  width: 100%;
-  background-color: white;
+
+/* BUTIKER */
+.butiker-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 4% 4%;
+    padding: 10%;
+    background-color: #e4e3d3;
+    color: #575761;
 }
 
-.like-content {
-  padding: 3%;
-  padding-left: 6%;
-  width: 50%;
-  justify-content: center;
-
-}
-
-.like-content p {
-  padding-top: 2%;
-  width: 60%;
-}
-
-.like-img {
-  width: 50%;
-}
-
-.btn {
-  margin-top: 7%;
-  color: white;
-  background-color: gray;
-  border: none;
-  width: 124px;
-  height: 32px;
-  font-size: 16px;
+.butiker-blocks {
+  border: #000 1px solid;
+  display: block;
+  width: 300px;
+  height: 200px;
 }

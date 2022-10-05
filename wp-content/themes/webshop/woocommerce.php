@@ -1,7 +1,3 @@
-woocommerce.php
-
-
-
 <?php get_header(); ?>
 
 <?= get_template_part('template-parts/header/header-category') ?>
@@ -69,6 +65,8 @@ woocommerce.php
 
 <?php endif; ?>
 
+
+<!-- Något vi gillar -->
 <?php get_template_part('/template-parts/like') ?>
 
 <?php
