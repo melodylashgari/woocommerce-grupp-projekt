@@ -49,11 +49,9 @@ header.header-site {
   margin: 15px 15px;
 }
 
-.menu-header-menu-container a{
+.menu-header-menu-container a {
   color: #e4e3d3;
 }
-
-
 
 h2.heading {
   color: #e4e3d3;
@@ -274,19 +272,17 @@ footer.footer-site ul li {
   padding-top: 5px;
 }
 
-footer.footer-site ul li a {
-  text-decoration: none;
-  color: white;
-}
-
 /* loggan */
 footer.footer-site h1.red {
-  color: white;
-  display: flex;
-  align-items: flex-end;
+  display: flex; 
+  flex-direction: row;
+  /*align-items: flex-end;*/
   justify-content: right;
   width: 100%;
-  padding-bottom: 10%;
+}
+
+footer.footer-site h1.red a{
+  width: auto;
 }
 
 footer.footer-nav {
@@ -654,7 +650,6 @@ span {
   width: 40%;
   padding-bottom: 3%;
 }
-
 
 .ul.products.columns-2 {
   display: flex;

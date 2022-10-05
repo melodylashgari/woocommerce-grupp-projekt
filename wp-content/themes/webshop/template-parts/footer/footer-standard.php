@@ -13,5 +13,6 @@
         <a href="">Terms and Agreements</a>
         <a href="">Affiliates</a>
     </div>
-    <h1 class="red"> <?php echo get_bloginfo('name'); ?> </h1>
+    <h1 class="red">         <a href=" <?= get_home_url(); ?> ">
+    <?php echo get_bloginfo('name'); ?> </a></h1>
 </footer>
