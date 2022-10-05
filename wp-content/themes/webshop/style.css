@@ -102,6 +102,7 @@ form#searchform {
 
 .search-header {
   text-align: center;
+  padding: 2%;
 }
 
 input#s {
@@ -657,4 +658,22 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   width: 124px;
   height: 32px;
   font-size: 16px;
+}
+
+/* BUTIKER */
+.butiker-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 4% 4%;
+    padding: 10%;
+    background-color: #e4e3d3;
+    color: #575761;
+}
+
+.butiker-blocks {
+  border: #000 1px solid;
+  display: block;
+  width: 300px;
+  height: 200px;
 }

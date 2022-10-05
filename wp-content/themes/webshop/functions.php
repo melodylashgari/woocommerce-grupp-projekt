@@ -187,6 +187,18 @@ function my_acf_init_block_types()
         'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
     ));
+
+    acf_register_block_type(array(
+
+        'name'              => 'Butiker',
+        'title'             => __('Butiker'),
+        'description'       => __('Block Butiker.'),
+        'render_template'   => 'template-parts/blocks/butiker.php',
+        'category'          => 'formatting',
+        'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
+        'keywords'          => array('butiker'), // So you can search it in the admin page
+
+    ));
 }
 
 
