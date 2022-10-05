@@ -4,8 +4,6 @@ Template Name: Våra butiker
 */
 ?>
 
-butiker.php
-
 <?php
 get_header();
 ?>

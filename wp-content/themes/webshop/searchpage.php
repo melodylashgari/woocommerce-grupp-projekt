@@ -1,4 +1,3 @@
-searchpage
 <?php
 /*
 Template Name: Search Page

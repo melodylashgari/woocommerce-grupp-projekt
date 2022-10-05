@@ -34,7 +34,11 @@ header.header-site {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 180px;
+  height: 100px;
+}
+
+.header-subtext {
+  padding: 2%;
 }
 
 #menu-header-menu {
