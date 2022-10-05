@@ -10,7 +10,7 @@
         <?php
         //the query
         $the_query = new WP_Query(array(
-            //'category_name' => 'nyheter',
+            'category_name' => 'nyheter',
             'posts_per_page' => 6,
         ));
         ?>

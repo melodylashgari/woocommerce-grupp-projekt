@@ -1,7 +1,7 @@
 <a href="<?php the_permalink( ); ?>">
     
     <div class="news-image">
-        <?php $image = get_field('news-image'); ?>
+        <?php $image = get_field('nyhets_bild'); ?>
         <?php if( !empty($image) ): ?>
             <img src="<?php echo $image['url']; ?>" />
         <?php endif; ?>

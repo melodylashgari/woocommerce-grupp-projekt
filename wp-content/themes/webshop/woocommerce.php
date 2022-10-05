@@ -69,5 +69,7 @@ woocommerce.php
 
 <?php endif; ?>
 
+<?php get_template_part('/template-parts/like') ?>
+
 <?php
 get_footer();

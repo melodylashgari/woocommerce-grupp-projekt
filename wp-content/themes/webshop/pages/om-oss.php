@@ -4,16 +4,16 @@
 
 <?php get_header(); ?> 
 
-<?php if(is_page(72)): ;?>
+<?php if(is_page(2)): ;?>
 	<?php
-		$page_title = get_field('page_title');
-		$image = get_field('image');
+		$page_title = get_field('sidtitel');
+		$image = get_field('bild');
 		$size = 'large';
-		$om_oss_title = get_field('om_oss_title');
-		$om_oss_text = ('om_oss_text');
+		$om_oss_title = get_field('text_titel');
+		$om_oss_text = ('text_under_titel');
 	?>
 	<div class="om-oss">
-		<h1> <?php the_field('page_title'); ?></h1>
+		<h1> <?php the_field('sidtitel'); ?></h1>
 		
 		<div class="about-img">
 			<?php if (!empty($image)): ?>
@@ -21,9 +21,10 @@
 			<?php endif; ?>
 		</div>
 		<div class="about-content">
-			<strong> <?php the_field('om_oss_title') ?> </strong>
+			<strong> <?php the_field('text_titel') ?> </strong>
 			<br>
-			<?php the_field('om_oss_text') ?>
+			<br>
+			<?php the_field('text_under_titel') ?>
 		</div>
 	</div>
 
