@@ -34,7 +34,7 @@ header.header-site {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 180px;
+  height: 60px;
 }
 
 #menu-header-menu {
@@ -48,8 +48,6 @@ header.header-site {
 .menu-header-menu-container a{
   color: #e4e3d3;
 }
-
-
 
 h2.heading {
   color: #e4e3d3;
@@ -92,6 +90,9 @@ form#searchform {
   justify-content: center;
   align-items: center;
 }
+
+/* HERO */
+
 
 /* SEARCH  */
 

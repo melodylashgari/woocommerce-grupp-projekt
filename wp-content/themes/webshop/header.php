@@ -13,6 +13,7 @@
         <header>
             <?php get_template_part('template-parts/header/header-standard') ?>
         </header>
+        <?= get_template_part('template-parts/blocks/front-page-hero') ?>
     </div>
 
     <?php wp_body_open(); ?>
