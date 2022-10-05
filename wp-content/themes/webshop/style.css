@@ -453,12 +453,14 @@ span {
   justify-content: center;
   height: 40px;
   font-size: 16px;
+  border-radius: 0%;
 }
 
-/* strecket - funkar ej*/
+/* strecket - border-bottom */
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
-  padding-left: 4px;
-  color: red;
+  border-bottom: 1px solid rgb(197, 196, 196);
+  z-index: 1;
+  margin-left: 5%;
 }
 
 /* text under description tab */
@@ -477,25 +479,37 @@ span {
   width: 100%;
   height: 400px;
   background-color: lightgray;
-  text-align: center;
+  text-align: left;
   margin-bottom: 0%;
   display: flex;
   justify-content: center;
 }
 
+/* fixa bilderna så d blir större - funkar ej!*/
 .woocommerce ul.products li.product a img {
   width: 200%;
   height: auto;
   display: block;
 }
 
+.woocommerce div.product p.product_title {
+  padding-top: 5%;
+  padding-left: 7%;
+  padding-bottom: 5%;
+}
+
+/* produkt stora och små bilder*/
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+  padding-left: 15%;
+}
+
+/* produktbilden*/
 .woocommerce div.product div.images img {
   display: block;
   width: 100%;
   height: auto;
   box-shadow: none;
-  padding: 8%;
-  
+  padding-bottom: 8%;
 }
 
 /* få enskild produktbild att synas */
@@ -505,8 +519,8 @@ span {
 
 /* bilderna you may also like  */
 .woocommerce .related.products li.product {
-	padding-left: 5%;
-  padding-right: 5%;
+	padding-left: 6%;
+  padding-right: 6%;
   height: 200px;
   width: 300px;
 }
@@ -534,7 +548,6 @@ span {
   padding-left: 6%;
   width: 50%;
   justify-content: center;
-
 }
 
 .like-content p {
@@ -559,7 +572,6 @@ span {
   height: 32px;
   font-size: 16px;
 }
-
  
 
 /* ENSKILD KATEGORI SIDA - template block */
@@ -600,8 +612,6 @@ span {
   background-color: #bd632f;
   text-align: center;
 }
-
-
 
 .term-description {
   padding-bottom: 5%;
@@ -695,40 +705,6 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   justify-content: center;
 }
 
-/* något vi gillar*/
-.like {
-  display: inline-flex;
-  height: 360px;
-  width: 100%;
-  background-color: white;
-}
-
-.like-content {
-  padding: 3%;
-  padding-left: 6%;
-  width: 50%;
-  justify-content: center;
-
-}
-
-.like-content p {
-  padding-top: 2%;
-  width: 60%;
-}
-
-.like-img {
-  width: 50%;
-}
-
-.btn {
-  margin-top: 7%;
-  color: white;
-  background-color: gray;
-  border: none;
-  width: 124px;
-  height: 32px;
-  font-size: 16px;
-}
 
 /* BUTIKER */
 .butiker-container {

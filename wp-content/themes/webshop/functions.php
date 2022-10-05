@@ -61,14 +61,41 @@ function change_rp_text($translated, $text, $domain)
     return $translated;
 }
 
-add_action( 'woocommerce_before_shop_loop_item_title', 'category_single_product', 25 );
+/* Ta bort kategori (under) */
+remove_action( 'woocommerce_single_product_summary',
+'woocommerce_template_single_meta', 40 );
 
-function category_single_product($terms){
-    
-$terms = get_the_terms( get_the_ID(), 'product_cat' );
+/* lägg till kategori över produktnamn*/
+add_action( 'woocommerce_single_product_summary', 'add_category_before_product_title', 4 );
+function add_category_before_product_title(){
+	global $post;
+	$terms = get_the_terms( $post->ID, 'product_cat' );
+	$title = '';
+	foreach ($terms as $term) {
+	   $title = $term->name .' ';
+	}
+	echo "<h3 class='product_title entry-title'>".$title."</h3>";
+}
 
-return $terms;
-   
+/* category överst på sidan - lägg till produktnamn*/
+add_action( 'woocommerce_before_single_product_summary', 'custom_product_category_title', 6 );
+function custom_product_category_title(){
+	global $post;
+	$terms = get_the_terms( $post->ID, 'product_cat' );
+
+    $product = '';
+	$title = '';
+	foreach ($terms as $term) {
+	   $title = $term->name .' ';
+	}
+	echo "<p class='product_title entry-title'>".$title." / ".$product." </p>";
+}
+
+/* byta namn på description tag */
+add_filter( 'woocommerce_product_description_tab_title', 'bbloomer_rename_description_product_tab_label' );
+ 
+function bbloomer_rename_description_product_tab_label() {
+    return 'Beskrivning';
 }
 
 
