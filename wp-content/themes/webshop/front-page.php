@@ -1,5 +1,8 @@
 <?php get_header(); ?> 
-frontpage
+
+
+
+
 <?php 
 if ( have_posts() ) :
     while ( have_posts() ) : the_post();
@@ -7,7 +10,6 @@ if ( have_posts() ) :
     endwhile;
 endif; 
 ?>
-
 
 <?php
 get_footer(); 

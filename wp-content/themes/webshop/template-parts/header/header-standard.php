@@ -8,7 +8,7 @@
         </a>
     </div>
     <div class="header-login">
-        <a href="" class="header-login-button">Logga in</a>
+        <a href="<?php echo home_url(); ?>/mitt-konto" class="header-login-button">Logga in</a>
     </div>
     <div class="header-options">
         <a href="<?php echo home_url(); ?>/varukorg" title="Cart Page"><?= get_template_part('template-parts/svg/cartimg') ?></a>
