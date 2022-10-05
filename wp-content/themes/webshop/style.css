@@ -480,6 +480,11 @@ span {
   background-color: lightgray;
 }
 
+.woocommerce  p.rp_text {
+  color: #46a32a;
+  padding-left: 8%;
+}
+
 /* bakom bilderna you may also like  */
 .woocommerce .related.products ul {
   width: 100%;

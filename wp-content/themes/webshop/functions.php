@@ -60,6 +60,27 @@ function change_rp_text($translated, $text, $domain)
     }
     return $translated;
 }
+/* texten under you may like*/
+add_action('woocommerce_after_single_product_summary', 'add_rp_text', 15);
+function add_rp_text() {
+    echo '<p class="rp_text"> Här är två liknande produkter som du kan gå in och titta på. </p>';
+}
+
+/*--custom description och text under -- */
+ /*
+add_filter( 'woocommerce_product_tabs', 'woo_custom_description_tab', 98 );
+function woo_custom_description_tab( $tabs ) {
+
+	$tabs['description']['callback'] = 'woo_custom_description_tab_content';	// Custom description callback
+
+	return $tabs;
+}
+
+function woo_custom_description_tab_content() {
+	echo '<h2>Custom Description</h2>';
+	echo '<p>Here\'s a custom description</p>';
+}
+*/
 
 /* + och - fungerar ej */
 add_action( 'woocommerce_after_quantity_input_field', 'ts_quantity_plus_sign' );
@@ -161,22 +182,6 @@ function woo_related_products_limit()
       return $args;
     }
 
-
- /*--custom description och text under -- */
- /*
-add_filter( 'woocommerce_product_tabs', 'woo_custom_description_tab', 98 );
-function woo_custom_description_tab( $tabs ) {
-
-	$tabs['description']['callback'] = 'woo_custom_description_tab_content';	// Custom description callback
-
-	return $tabs;
-}
-
-function woo_custom_description_tab_content() {
-	echo '<h2>Custom Description</h2>';
-	echo '<p>Here\'s a custom description</p>';
-}
-*/
 
 /* ta bort SKU nummer*/
 add_filter('wc_product_sku_enabled', '__return_false');
