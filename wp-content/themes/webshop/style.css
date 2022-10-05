@@ -432,9 +432,14 @@ span {
 /* produktens namn*/
 .woocommerce div.product .product_title {
   color: black;
-  padding-top: 15%;
+  padding-top: 4%;
+  padding-bottom: 1%;
 }
 
+.woocommerce-product-details__short-description  {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 /* Köp knapp */
 .woocommerce div.product form.cart .button {
   background-color: gray;
@@ -442,6 +447,7 @@ span {
   border-radius: 0;
   font-size: 12px;
   display: block;
+  width: 122px;
 }
 
 /* description tab */
@@ -498,9 +504,55 @@ span {
   padding-bottom: 5%;
 }
 
+/* välj storlek */
+.woocommerce div.product form.cart .variations th.label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* samma som över*/
+.woocommerce div.product form.cart .variations label {
+  width: 100%;
+  display: block;
+}
+
+/* choose an option */
+.woocommerce div.product form.cart .variations td {
+  display: block;
+}
+.woocommerce div.product form.cart .variations select {
+  min-width: 20%;
+  max-width: 40%;
+}
+
+.woocommerce .quantity .qty {
+  display: inline;
+  border: none;
+  padding-left: 10px;
+}
+
+button.plus, button.minus{
+  border-radius: 50%;
+  background-color: #c6b7af;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.woocommerce div.product form.cart div.quantity {
+  display: block;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
 /* produkt stora och små bilder*/
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
   padding-left: 15%;
+}
+
+.woocommerce div.product div.images img {
+  padding-right: 8%;
 }
 
 /* produktbilden*/

@@ -61,6 +61,19 @@ function change_rp_text($translated, $text, $domain)
     return $translated;
 }
 
+/* + och - fungerar ej */
+add_action( 'woocommerce_after_quantity_input_field', 'ts_quantity_plus_sign' );
+ 
+function ts_quantity_plus_sign() {
+   echo '<button type="button" class="plus" >+</button>';
+}
+ 
+add_action( 'woocommerce_before_quantity_input_field', 'ts_quantity_minus_sign' );
+function ts_quantity_minus_sign() {
+   echo '<button type="button" class="minus" >-</button>';
+}
+
+
 /* Ta bort kategori (under) */
 remove_action( 'woocommerce_single_product_summary',
 'woocommerce_template_single_meta', 40 );
@@ -74,20 +87,23 @@ function add_category_before_product_title(){
 	foreach ($terms as $term) {
 	   $title = $term->name .' ';
 	}
-	echo "<h3 class='product_title entry-title'>".$title."</h3>";
+	echo "<h5 class='product_title entry-title'>".$title."</h5>";
 }
 
 /* category överst på sidan - lägg till produktnamn*/
+add_action( 'woocommerce_before_single_product', 'woocommerce_template_single_title', 7 );
 add_action( 'woocommerce_before_single_product_summary', 'custom_product_category_title', 6 );
 function custom_product_category_title(){
 	global $post;
 	$terms = get_the_terms( $post->ID, 'product_cat' );
+
 
     $product = '';
 	$title = '';
 	foreach ($terms as $term) {
 	   $title = $term->name .' ';
 	}
+
 	echo "<p class='product_title entry-title'>".$title." / ".$product." </p>";
 }
 
