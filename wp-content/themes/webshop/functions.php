@@ -37,7 +37,7 @@ if (!function_exists('mytheme_register_nav_menu')) {
 // Excerpt
 function wpdocs_custom_excerpt_length($length)
 {
-    return 2;
+    return 10;
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 5);
 
