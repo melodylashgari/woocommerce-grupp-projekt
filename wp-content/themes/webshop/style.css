@@ -423,6 +423,9 @@ span {
 .woocommerce div.product form.cart .button {
   background-color: gray;
   color: white;
+  border-radius: 0;
+  font-size: 12px;
+  display: block;
 }
 
 /* description tab */
@@ -459,6 +462,29 @@ span {
   height: 400px;
   background-color: lightgray;
   text-align: center;
+  margin-bottom: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.woocommerce ul.products li.product a img {
+  width: 200%;
+  height: auto;
+  display: block;
+}
+
+.woocommerce div.product div.images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  padding: 8%;
+  
+}
+
+/* få enskild produktbild att synas */
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+  opacity: 1 !important;
 }
 
 /* bilderna you may also like  */
@@ -472,6 +498,50 @@ span {
 /* dölj köpknapp i you may also like */
 .woocommerce .related.products .button {
   display: none;
+}
+
+/* ta bort h2 description */
+.woocommerce div.product .woocommerce-tabs .panel h2 {
+  display: none;
+}
+
+/* något vi gillar*/
+.like {
+  display: inline-flex;
+  height: 360px;
+  width: 100%;
+  background-color: white;
+}
+
+.like-content {
+  padding: 3%;
+  padding-left: 6%;
+  width: 50%;
+  justify-content: center;
+
+}
+
+.like-content p {
+  padding-top: 2%;
+  width: 60%;
+}
+
+.like-img {
+  width: 50%;
+}
+
+.woocommerce img, .woocommerce-page .like-img img {
+  height: 360px;
+}
+
+.btn {
+  margin-top: 7%;
+  color: white;
+  background-color: gray;
+  border: none;
+  width: 124px;
+  height: 32px;
+  font-size: 16px;
 }
 
  
@@ -543,6 +613,7 @@ span {
   width: 300px;
   height: 200px;
 }
+
 .produktkategorier-content {
   display: flex;
   flex-direction: row;
@@ -594,8 +665,8 @@ li.product {
 }
 
 img.attachment-thumbnail.size-thumbnail.wp-post-image {
-    height: 15rem;
-    width: 20rem;
+  height: 15rem;
+  width: 20rem;
 }
 
 .recommendation-info {
@@ -607,39 +678,4 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   width: 15rem;
   overflow: hidden;
   justify-content: center;
-}
-
-/* något vi gillar*/
-.like {
-  display: inline-flex;
-  height: 360px;
-  width: 100%;
-  background-color: white;
-}
-
-.like-content {
-  padding: 3%;
-  padding-left: 6%;
-  width: 50%;
-  justify-content: center;
-
-}
-
-.like-content p {
-  padding-top: 2%;
-  width: 60%;
-}
-
-.like-img {
-  width: 50%;
-}
-
-.btn {
-  margin-top: 7%;
-  color: white;
-  background-color: gray;
-  border: none;
-  width: 124px;
-  height: 32px;
-  font-size: 16px;
 }

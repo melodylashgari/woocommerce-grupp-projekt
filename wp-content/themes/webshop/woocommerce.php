@@ -69,6 +69,8 @@ woocommerce.php
 
 <?php endif; ?>
 
+
+<!-- Något vi gillar -->
 <?php get_template_part('/template-parts/like') ?>
 
 <?php

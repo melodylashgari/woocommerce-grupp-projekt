@@ -3,6 +3,12 @@ Shop page
 <?php
 get_header();
 ?>
+<?php if (is_product()) : ?>
+
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'single-post-thumbnail' );?>
+                                        
+    <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+
 <div class="single-product">
 
 
@@ -53,6 +59,8 @@ get_header();
 <!-- beskrivning -->
 
 </div> 
+<?php endif; ?>
+
 <?php
 get_footer();
 ?>

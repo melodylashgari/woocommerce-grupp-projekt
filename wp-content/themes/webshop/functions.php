@@ -61,6 +61,15 @@ function change_rp_text($translated, $text, $domain)
     return $translated;
 }
 
+add_action( 'woocommerce_before_shop_loop_item_title', 'category_single_product', 25 );
+
+function category_single_product($terms){
+    
+$terms = get_the_terms( get_the_ID(), 'product_cat' );
+
+return $terms;
+   
+}
 
 
 add_filter( 'woocommerce_product_tabs', 'my_remove_product_tabs', 98 );
