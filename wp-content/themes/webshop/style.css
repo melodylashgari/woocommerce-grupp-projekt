@@ -37,6 +37,10 @@ header.header-site {
   height: 180px;
 }
 
+.header-subtext {
+  padding: 2%;
+}
+
 #menu-header-menu {
   list-style-type: none;
   display: flex;
@@ -97,10 +101,12 @@ form#searchform {
 
 .header-sök {
   text-align: center;
+  padding: 2%;
 }
 
 .search-header {
   text-align: center;
+  padding: 2%;
 }
 
 input#s {
@@ -108,25 +114,39 @@ input#s {
   height: 50px;
 }
 
+.block-excerpt {
+  margin: 1%;
+}
+
+.block-info-button {
+  color: #e4e3d3;
+  margin-top: 5%;
+}
+
 .post-block-container {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  gap: 2%;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 2%;
 }
 
 .post-block {
-  display: flex;
-  justify-content: space-around;
+
 }
 
 .post-block-info {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-start;
+  margin-bottom: 2%;
+}
+
+.block-info-button {
 }
 
 /* Woocommerce.php  */
@@ -678,4 +698,57 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   width: 15rem;
   overflow: hidden;
   justify-content: center;
+}
+
+/* något vi gillar*/
+.like {
+  display: inline-flex;
+  height: 360px;
+  width: 100%;
+  background-color: white;
+}
+
+.like-content {
+  padding: 3%;
+  padding-left: 6%;
+  width: 50%;
+  justify-content: center;
+
+}
+
+.like-content p {
+  padding-top: 2%;
+  width: 60%;
+}
+
+.like-img {
+  width: 50%;
+}
+
+.btn {
+  margin-top: 7%;
+  color: white;
+  background-color: gray;
+  border: none;
+  width: 124px;
+  height: 32px;
+  font-size: 16px;
+}
+
+/* BUTIKER */
+.butiker-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 4% 4%;
+    padding: 10%;
+    background-color: #e4e3d3;
+    color: #575761;
+}
+
+.butiker-blocks {
+  border: #000 1px solid;
+  display: block;
+  width: 300px;
+  height: 200px;
 }

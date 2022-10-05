@@ -1,4 +1,3 @@
-searchpage
 <?php
 /*
 Template Name: Search Page
@@ -8,7 +7,7 @@ Template Name: Search Page
 get_header();
 ?>
 
-    <header>
+    <header class="search-header">
         <h1 class="header-sök"> SÖK </h1>
         <?= get_search_form(); ?>
     </header>

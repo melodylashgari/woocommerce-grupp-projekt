@@ -37,7 +37,7 @@ if (!function_exists('mytheme_register_nav_menu')) {
 // Excerpt
 function wpdocs_custom_excerpt_length($length)
 {
-    return 2;
+    return 10;
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 5);
 
@@ -194,6 +194,18 @@ function my_acf_init_block_types()
         'category'          => 'formatting',
         'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
         'keywords'          => array('category-recommend '), // So you can search it in the admin page
+
+    ));
+
+    acf_register_block_type(array(
+
+        'name'              => 'Butiker',
+        'title'             => __('Butiker'),
+        'description'       => __('Block Butiker.'),
+        'render_template'   => 'template-parts/blocks/butiker.php',
+        'category'          => 'formatting',
+        'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
+        'keywords'          => array('butiker'), // So you can search it in the admin page
 
     ));
 }
