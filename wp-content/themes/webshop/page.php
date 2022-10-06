@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-vad är detta för sida?
-
 <ul class="products">
 	<?php
 		$args = array(
