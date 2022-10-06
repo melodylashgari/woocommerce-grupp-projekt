@@ -50,11 +50,11 @@ header.header-site {
 }
 
 .menu-header-menu-container a {
-  color: #e4e3d3;
+  color: #ffffff;
 }
 
 h2.heading {
-  color: #e4e3d3;
+  color: #ffffff;
   margin-top: 15px;
   text-transform: uppercase;
 }
@@ -64,7 +64,7 @@ h2.heading {
 }
 
 .header-login-button{
-  color: #e4e3d3;
+  color: #ffffff;
   display: inline;
 }
 
@@ -73,6 +73,7 @@ h2.heading {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
+  color: white;
 }
 
 .sub-menu {
@@ -96,7 +97,74 @@ form#searchform {
 }
 
 /* HERO */
+.front-page-block {
+  height: 600px;
+  width: 100vw;
+  background: black;
+  overflow: hidden;
+}
 
+.front-page-block img {
+  object-fit: cover;
+  height: 600px;
+  width: 100vw;
+  opacity: 0.7;
+}
+
+.hero-heading{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-text{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -470%);
+  color: white;
+  text-shadow: 2px 2px 20px #000000;
+  font-size: 60px;
+}
+
+/* VISION */
+
+.vision-block{
+  width: 100vw;
+  height: 40vh;
+  padding: 50px 50px 50px 50px;
+  background-color: #97b98d;
+}
+
+.vision-heading{
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.03em;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.vision-description{
+  text-align: center;
+  color: white;
+  font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 25px;
+
+}
+
+.vision-button{
+  background-color: #e4e3d3;
+  color: #353434;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 14px;
+  position: absolute;
+  left: 44%;
+  margin-top: 20px;
+}
 
 /* SEARCH  */
 
@@ -133,10 +201,6 @@ input#s {
   padding-top: 2%;
 }
 
-.post-block {
-
-}
-
 .post-block-info {
   display: flex;
   justify-content: center;
@@ -147,15 +211,11 @@ input#s {
   margin-bottom: 2%;
 }
 
-.block-info-button {
-}
-
 /* Woocommerce.php  */
 
 .other-category-container {
   background-color: #97b98d;
 }
-
 
 /*om oss*/
 .om-oss {
@@ -260,7 +320,7 @@ input#s {
 
 /* footer */
 footer.footer-site {
-  background-color: #97b98d;
+  background-color: #868e84;
   display: flex;
   position: relative;
   bottom: 0;
@@ -727,14 +787,16 @@ li.product {
 /* ENSKILD KATEGORI SIDA - template block */
 .header-single-page {
   width: 100%;
-  height: 200px;  
+  height: 180px;  
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
   position: relative;
-  color: white;
+  color: #e4e3d3;
+  background-color: #bd632f;
 }
 
 .header-text {
@@ -819,4 +881,17 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   display: block;
   width: 300px;
   height: 200px;
+}
+
+/* Link pages */
+.link-pages {
+  padding: 10%;
+}
+
+.link-pages p {
+  padding-bottom: 2%;
+}
+
+.link-pages h1, h2, h3 {
+  padding-bottom: 1%;
 }

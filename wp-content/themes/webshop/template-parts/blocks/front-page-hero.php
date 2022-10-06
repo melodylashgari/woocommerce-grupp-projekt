@@ -1,11 +1,12 @@
-<div class="hero-block">
-    <?php
-    $image = get_field('hero_image');
-    $size = 'large'; // (thumbnail, medium, large, full or custom size)
+<div class="front-page-block">
 
-    if ($image) {
-        echo wp_get_attachment_image($image, $size);
-    } ?> 
-    
-    <h1 class="hero-text"><?= the_field('hero_heading'); ?></h1>
+<?php if( get_field('image') ): ?>
+    <img src="<?php the_field('image'); ?>" />
+<?php endif; ?>
+
+
+</div>
+
+<div class="hero-heading">
+<h1 class="hero-text"><?= the_field('heading'); ?></h1>
 </div>
