@@ -213,7 +213,6 @@ if (function_exists('acf_add_options_page')) {
 add_action('acf/init', 'my_acf_init_block_types');
 
 function my_acf_init_block_types()
-
 {
     // Check function exists.
 
@@ -244,8 +243,6 @@ function my_acf_init_block_types()
             'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
         ));
-
-
         acf_register_block_type(array(
 
             'name'              => 'Visioner',
@@ -257,18 +254,6 @@ function my_acf_init_block_types()
             'keywords'          => array('category-recommend '), // So you can search it in the admin page
 
         ));
-
-        acf_register_block_type(array(
-
-            'name'              => 'Hero',
-            'title'             => __('Hero'),
-            'description'       => __('Block Hero.'),
-            'render_template'   => 'template-parts/blocks/front-page-hero.php',
-            'category'          => 'formatting',
-            'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
-            'keywords'          => array('front-page-hero '), // So you can search it in the admin page
-        ));
-        add_action('wp_enqueue_scripts', 'add_google_fonts');
         acf_register_block_type(array(
             'name'              => 'Butiker',
             'title'             => __('Butiker'),
@@ -279,7 +264,6 @@ function my_acf_init_block_types()
             'keywords'          => array('butiker'), // So you can search it in the admin page
 
         ));
-
         acf_register_block_type(array(
             'name'              => 'Hero',
             'title'             => __('Hero'),
@@ -288,8 +272,8 @@ function my_acf_init_block_types()
             'category'          => 'formatting',
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
             'keywords'          => array('front-page-hero'), // So you can search it in the admin page
-
         ));
+    }
     }
 
     /**
@@ -311,16 +295,12 @@ function my_acf_init_block_types()
         }
         return $title;
     }
-
     /* Google font */
-
     function add_google_fonts()
     {
-
         wp_enqueue_style(' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false);
     }
-}
-
+    add_action('wp_enqueue_scripts', 'add_google_fonts');
 function mytheme_add_woocommerce_support() {
     add_theme_support('woocommerce');
 }
