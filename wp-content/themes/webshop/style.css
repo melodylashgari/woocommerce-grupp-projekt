@@ -226,7 +226,7 @@ input#s {
 
 /*om oss*/
 .om-oss {
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
 }
 .om-oss h1 {
@@ -242,6 +242,7 @@ input#s {
 .about-content {
   padding: 4% 35%;
   line-height: 145%;
+  height: auto;
 }
 
 /* kontakta oss sidan */
@@ -553,6 +554,16 @@ span {
 .woocommerce  p.rp_text {
   color: #46a32a;
   padding-left: 8%;
+  overflow-wrap: normal;
+
+}
+
+.related {
+  background-color: #c6b7af;
+}
+
+.rp-content {
+ 
 }
 
 /* bakom bilderna you may also like  */
@@ -699,55 +710,33 @@ button.plus, button.minus{
   height: 32px;
   font-size: 16px;
 }
- 
 
-/* ENSKILD KATEGORI SIDA - template block */
-.header-single-page {
-  width: 100%;
-  height: 200px;  
+.rp-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  color: white;
+  flex-direction: column;
+  background-color: #97b98d;
 }
 
-.header-text {
-  color: #e4e3d3;
+.rp-content {
+  padding-top: 3%;
 }
 
-.header-single-page img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+.like-title {
+  padding-left: 8%;
 }
 
-.header-info {
-  position: relative;
-  align-items: center;
-  text-align: center;
-  color: #e4e3d3;
+a.button.product_type_external {
+  display: none;
+}
+.product-p {
+  padding-left: 8%;
 }
 
-.page-title, .term-description {
-  background-color: #bd632f;
-  text-align: center;
-}
-
-.term-description {
-  padding-bottom: 5%;
-}
-
-.woocommerce-categories {
+.rec-block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5%;
 }
 
 
@@ -801,6 +790,56 @@ button.plus, button.minus{
 
 li.product {
   list-style-type:none;
+}
+ 
+
+/* ENSKILD KATEGORI SIDA - template block */
+.header-single-page {
+  width: 100%;
+  height: 200px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.header-text {
+  color: #e4e3d3;
+}
+
+.header-single-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-info {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  color: #e4e3d3;
+}
+
+.page-title, .term-description {
+  background-color: #bd632f;
+  text-align: center;
+}
+
+.term-description {
+  padding-bottom: 5%;
+}
+
+.woocommerce-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ta bort köp knappen från kontaka oss och om oss */
