@@ -1,5 +1,4 @@
 Shop page
-
 <?php
 get_header();
 ?>
