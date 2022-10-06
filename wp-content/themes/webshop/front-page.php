@@ -1,6 +1,9 @@
 <?php get_header(); ?> 
 
-<?php get_template_part('header-standard')?>
+
+<div class="page-content">
+    <?php the_content(); ?>
+</div>
 
 <?php
 get_footer(); 

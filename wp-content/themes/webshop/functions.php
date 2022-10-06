@@ -268,6 +268,7 @@ function my_acf_init_block_types()
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
             'keywords'          => array('front-page-hero '), // So you can search it in the admin page
         ));
+        add_action('wp_enqueue_scripts', 'add_google_fonts');
         acf_register_block_type(array(
             'name'              => 'Butiker',
             'title'             => __('Butiker'),
@@ -276,6 +277,17 @@ function my_acf_init_block_types()
             'category'          => 'formatting',
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
             'keywords'          => array('butiker'), // So you can search it in the admin page
+
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'Hero',
+            'title'             => __('Hero'),
+            'description'       => __('Block Front Page Hero.'),
+            'render_template'   => 'template-parts/blocks/front-page-hero.php',
+            'category'          => 'formatting',
+            'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
+            'keywords'          => array('front-page-hero'), // So you can search it in the admin page
 
         ));
     }
@@ -307,8 +319,6 @@ function my_acf_init_block_types()
 
         wp_enqueue_style(' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false);
     }
-
-    add_action('wp_enqueue_scripts', 'add_google_fonts');
 }
 
 function mytheme_add_woocommerce_support() {
