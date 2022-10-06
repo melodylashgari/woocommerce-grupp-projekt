@@ -229,7 +229,7 @@ input#s {
   padding: 5px;
   margin-top: 3px;
   margin-bottom: 14px;
-  color: lightgrey;
+  color: black;
   border: 1px solid rgb(209, 208, 208);
   border-radius: 3px;
 }
@@ -260,7 +260,7 @@ input#s {
 
 /* footer */
 footer.footer-site {
-  background-color: rgb(76, 148, 118);
+  background-color: #97b98d;
   display: flex;
   position: relative;
   bottom: 0;
@@ -495,9 +495,6 @@ span {
   background-color: #c6b7af;
 }
 
-.rp-content {
- 
-}
 
 /* bakom bilderna you may also like  */
 .woocommerce .related.products ul {
@@ -705,7 +702,8 @@ a.button.product_type_external {
   padding: 5%;
 }
 
-.product-p {
+
+.product-par {
   width: 40%;
   padding-bottom: 3%;
 }

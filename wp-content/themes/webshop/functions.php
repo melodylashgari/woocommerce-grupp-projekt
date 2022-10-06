@@ -281,7 +281,7 @@ function add_woocommerce_support()
 add_action('after_setup_theme', 'add_woocommerce_support');
 
 
-
+/*
 function woocommerce_content()
 {
     if (is_singular('product')) {
@@ -338,7 +338,7 @@ function woocommerce_content()
         endif;
     }
 }
-
+*/
 /**
  * Proper ob_end_flush() for all levels
  *
@@ -366,6 +366,4 @@ function add_google_fonts() {
 wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap', false );}
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
-
-
-
+}
