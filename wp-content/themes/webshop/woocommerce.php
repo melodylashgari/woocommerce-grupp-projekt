@@ -1,4 +1,3 @@
-A
 <?php get_header(); ?>
 
     <div class="woocommerce-content">
