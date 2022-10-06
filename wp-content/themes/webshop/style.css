@@ -880,3 +880,8 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image {
   width: 300px;
   height: 200px;
 }
+
+/* CHECKOUT  */
+div#stripe-card-element {
+    height: 30px;
+}
