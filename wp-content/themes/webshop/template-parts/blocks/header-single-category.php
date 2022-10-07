@@ -1,5 +1,4 @@
 <!-- hero-block -->
-
 <div class="header-single-page" style="background-color: <?= get_field('color'); ?>;">
     <div>
         <?php

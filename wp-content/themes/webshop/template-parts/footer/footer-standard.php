@@ -9,9 +9,9 @@
     </nav>
     <div class="info">
         <h3 class="info3">Information</h3>
-        <a href="">Privacy policy</a>
-        <a href="">Terms and Agreements</a>
-        <a href="">Affiliates</a>
+        <a href="<?php echo get_permalink(3) ?> ">Privacy policy</a>
+        <a href="<?php echo get_permalink(299) ?> ">Terms and Agreements</a>
+        <a href="<?php echo get_permalink(303) ?>">Affiliates</a>
     </div>
     <h1 class="red">         <a href=" <?= get_home_url(); ?> ">
     <?php echo get_bloginfo('name'); ?> </a></h1>

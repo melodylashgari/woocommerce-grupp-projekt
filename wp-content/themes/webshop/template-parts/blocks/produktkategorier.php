@@ -3,7 +3,7 @@
         <div>
             <h1> Produktkategorier </h1>
             <br>
-            <p class="product-p"> 
+            <p class="product-par"> 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit neque lorem,
                 nec congue ligula ornare vel. Sed bibendum dignissim rutrum.
             </p>

@@ -7,7 +7,7 @@
             <p class="product-p">Två liknande produkter du kanske är intresserad av.</p>
         </div>
         <div class="rec-block">
-        <?php
+        <?php 
 		$args = array(
 			'post_type' => 'product',
 			'posts_per_page' => 2
