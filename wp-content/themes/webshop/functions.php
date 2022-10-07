@@ -267,11 +267,20 @@ function my_acf_init_block_types()
         acf_register_block_type(array(
             'name'              => 'Hero',
             'title'             => __('Hero'),
-            'description'       => __('Block Front Page Hero.'),
+            'description'       => __('Block Front Page Hero'),
             'render_template'   => 'template-parts/blocks/front-page-hero.php',
             'category'          => 'formatting',
             'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
             'keywords'          => array('front-page-hero'), // So you can search it in the admin page
+        ));
+        acf_register_block_type(array(
+            'name'              => 'Categories Block',
+            'title'             => __('Categories Block'),
+            'description'       => __('Block Categories'),
+            'render_template'   => 'template-parts/blocks/categories-block.php',
+            'category'          => 'formatting',
+            'icon'              => 'slides', // You can find icons on wordpress page (search: wordpress icon)
+            'keywords'          => array('categories-block'), // So you can search it in the admin page
         ));
     }
     }
